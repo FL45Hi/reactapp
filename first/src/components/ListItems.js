@@ -10,7 +10,7 @@ const ListItems = () => {
     );
     
     return (
-    <div>{listItems}</div>
+        <div>{listItems}</div>
     );
         
 }
