@@ -51,7 +51,7 @@ const Arrow = () => {
             <p>Numbers: {nums + ""}</p>
             <p>Fives: {fives + ""}</p>
             
-            <p>{new Person}</p>
+            {/* <p>{new Person}</p> */}
             
         </>
     )

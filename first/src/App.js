@@ -15,14 +15,14 @@ import ListItems from './components/ListItems';
 function App() {
   return (
     <div className='App'>
-      {/* <ConstLetVar /> */}
-      {/* <Destructing /> */}
-      {/* <Spread /> */}
-      {/* <Restparams /> */}
+      <ConstLetVar />
+      <Destructing />
+      <Spread />
+      <Restparams />
 
       <MapSet />
       <ReduceFilter />
-      {/* <Arrow /> */}
+      <Arrow />
 
       <ListItems />
 

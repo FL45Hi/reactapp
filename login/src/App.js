@@ -1,8 +1,11 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Login from './components/Login'
+import Register from './components/Register';
 
 function App() {
   return (
@@ -22,4 +25,4 @@ const Root = () => (
   </Router>
 )
 
-export default App;
+export default Root;
