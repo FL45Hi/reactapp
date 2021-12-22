@@ -3,31 +3,70 @@ import React, { useState, useEffect } from 'react';
 
 const Register = () => {
   
-  const [credentials, setCredentials] = useState({
-    
-    email: '',
-    username: '',
-    password: '',
-  });
+  const initialValues = { username: "", email: "", password: "", gender: ""};
+  const [data, setData] = useState(initialValues);
 
-  // const [name, setName] = useState("");
+  const [errors, setErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
 
   const handleInput = (e) => {
-    setCredentials( { [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setData( { ...data, [name]: value });
   }
-
-  const { username, password } = credentials;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // alert('You logged in '+$username)
-    alert("Hello ")
-    console.log(credentials)
+    setErrors(validate(data));
+    setIsSubmit(true);
+    // alert('You logged in '+$data.username)
+    
+    // console.log(data);
+  }
+
+  useEffect( () => {
+    console.log(errors);
+    if (Object.keys(errors).length === 0 && isSubmit){
+      console.log(data);
+    }
+  }, [errors]);
+
+  const validate = (val) => {
+    const err = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+    if (!val.username) {
+      err.username = "Username is required!";
+    }
+    if (!val.email) {
+      err.email = "Email is required!";
+    } 
+    else if ( !regex.test(val.email)) {
+      err.password = "This is not valid Email Format.";
+    } 
+    if (!val.password) {
+      err.password = "Password is required!";
+    }
+    else if (val.password.length < 4) {
+      err.password = "Password must be more than 4 characters";
+    } else if (val.password.length > 10) {
+      err.password = "Password cannot exceed more than 10 characters";
+    }
+    
+
+    return err;
   }
   
   return (
     <>
       <div className="App">
+
+      {Object.keys(errors).length === 0 && isSubmit ? (
+        <div className=" login-form "> Registered Successfully</div>
+      ) : (
+        <pre>{JSON.stringify(data, undefined, 4)}</pre>
+      )}
+
+
       <form className="login-form" onSubmit={handleSubmit}>
         <div>
           <h1>Registration</h1>
@@ -38,7 +77,7 @@ const Register = () => {
                 type="text"
                 name="username"
                 placeholder="Enter Username"
-                // value={username}
+                value={data.username}
                 onChange={handleInput}
               />
             </div>
@@ -49,7 +88,7 @@ const Register = () => {
                 type="email"
                 name="email"
                 placeholder="Enter Email"
-                // value={username}
+                value={data.email}
                 onChange={handleInput}
               />
             </div>
@@ -61,16 +100,16 @@ const Register = () => {
                 type="password"
                 name="password"
                 placeholder="Password"
-                // value={password}
+                value={data.password}
                 onChange={handleInput}
               />
             </div>
 
             <div className='form-field'>
               <label htmlFor="gender ">Gender</label>
-              <select 
-              // onChange={handleSelect}
-               defaultValue="Select Gender">
+              <select name="gender" 
+                 value={data.gender}
+                 onChange={handleInput}>
                 <option defaultValue> Select Gender </option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -83,8 +122,7 @@ const Register = () => {
 
         </div>
 
-        
-
+    
         </form>
 
       </div>
