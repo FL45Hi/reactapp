@@ -21,6 +21,7 @@ const Login = () => {
     // alert('You logged in '+$username)
     alert("Hello ")
     console.log(credentials)
+
   }
   
   return (
@@ -48,6 +49,13 @@ const Login = () => {
                 // value={password}
                 onChange={handleInput}
               />
+            </div>
+
+            <div style={{height:"1.5rem", marginTop:"20px" }}>
+              
+              <input type="checkbox" name="remember"></input>
+              <label htmlFor="remember">Remember Me</label>
+              
             </div>
         
 
