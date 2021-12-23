@@ -27,6 +27,7 @@ const Register = () => {
     console.log(errors);
     if (Object.keys(errors).length === 0 && isSubmit){
       console.log(data);
+      
     }
   }, [errors]);
 
@@ -80,6 +81,7 @@ const Register = () => {
                 value={data.username}
                 onChange={handleInput}
               />
+              <p>{errors.username}</p>
             </div>
 
             <div className='form-field'>
@@ -91,6 +93,7 @@ const Register = () => {
                 value={data.email}
                 onChange={handleInput}
               />
+              <p>{errors.email}</p>
             </div>
 
             
@@ -103,6 +106,7 @@ const Register = () => {
                 value={data.password}
                 onChange={handleInput}
               />
+              <p>{errors.password}</p>
             </div>
 
             <div className='form-field'>
@@ -114,6 +118,7 @@ const Register = () => {
                 <option value="male">Male</option>
                 <option value="female">Female</option>
               </select> <br />
+              {/* <p>{errors.gender}</p> */}
             </div>
 
             <div className='form-field'>

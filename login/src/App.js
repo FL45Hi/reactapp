@@ -22,6 +22,8 @@ function App() {
           Register
       </Link>
 
+      
+
     </div>
     </>
   );

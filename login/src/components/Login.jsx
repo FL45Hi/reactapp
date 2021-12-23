@@ -29,8 +29,8 @@ const Login = () => {
   useEffect( () => {
     console.log(errors);
     if (Object.keys(errors).length === 0 && isSubmit){
-      console.log(credentials);
-    }
+      console.log(credentials);     
+    }    
   }, [errors]);
 
   const validate = (val) => {
@@ -73,6 +73,7 @@ const Login = () => {
                 value={credentials.username}
                 onChange={handleInput}
               />
+              <p>{errors.username}</p>
             </div>
             <div className='form-field'>
               <label htmlFor="password">Password</label>
@@ -83,6 +84,7 @@ const Login = () => {
                 value={credentials.password}
                 onChange={handleInput}
               />
+              <p>{errors.password}</p>
             </div>
 
             <div style={{height:"1.5rem", marginTop:"20px" }}>
