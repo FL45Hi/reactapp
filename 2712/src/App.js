@@ -1,25 +1,71 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Calculator from './components/Calculator';
+import EventHandler from './components/eventHandler';
+import PassStatetoChildComp from './components/passStatetoChildComp';
+import StatefulComp from './components/statefulComp';
 
-function App() {
+const Hello = (props) => {
+
+  // const name = props.name   
+  // const age = props.age
+
+  const { name, age } = props   //ES6 destructing
+
+  // const bornYear = () => {
+  //   const yearNow = new Date().getFullYear()
+  //   return yearNow - props.age
+  // }
+
+  const bornYear = () => new Date().getFullYear() - age
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>
+        Hello {props.name}, you are {props.age} years old
+      </p>
+
+      <p>So you were probably born in {bornYear()}</p>
+
     </div>
-  );
+  )
 }
+
+const App = () => {
+  const name = 'Peter'
+  const age = 10
+
+  return (
+    <div>
+      <h1>Greetings</h1>
+      <Hello name="Maya" age={26 + 10} />
+      <Hello name={name} age={age} />
+
+
+      <div style={{padding: "10%"}}>
+        <h3> StateFul Component</h3>
+        <StatefulComp />
+      </div>
+
+      <div style={{padding: "10%"}}>
+        <h3> Event Handler with onClick fuctn Component</h3>
+        <EventHandler />
+      </div>
+
+      <div style={{padding: "10%"}}>
+        <h3> Pass states to child components</h3>
+        <PassStatetoChildComp/>
+      </div>
+
+
+      <div style={{padding: "10%"}}>
+      <h2>Calculator</h2>
+              <Calculator/>
+      </div>
+      
+    </div>
+  )
+}
+
 
 export default App;
