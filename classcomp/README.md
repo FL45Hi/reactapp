@@ -16,7 +16,7 @@ $ NOTE: Child component is mounted before the parent component $
 4. componentDidMount()
 
 ### Updating
-1.static getDerivedStateFromProps()
+1. static getDerivedStateFromProps()
 2. shouldComponentUpdate() - this methods returns boolean i.e. it agrees with updation 
 or not depending on that it return true or false
 Unmounting
