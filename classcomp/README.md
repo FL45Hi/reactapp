@@ -19,8 +19,8 @@ $ NOTE: Child component is mounted before the parent component $
 or not depending on that it return true or false
 Unmounting
 3. render()
-4. getSnapshotBeforeUpdate() - this to have a snapshot previous state and getDerivedStateFromProps
-5. componentDidUpdate() - this will be called only if shouldComponentUpdate will return
+4. 4. getSnapshotBeforeUpdate() - this to have a snapshot previous state and getDerivedStateFromProps
+5. 5. componentDidUpdate() - this will be called only if shouldComponentUpdate will return
 true
 
 ### Unmounting 
