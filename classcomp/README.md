@@ -1,8 +1,6 @@
-# Class component and component lifecycle
+## Class component and component lifecycle
 
-## React Component Lifecycle Methods.
-
-### Lifecycle consiste of 4 phases
+### React Lifecycle Methods consist of 4 phases
 
 ### Initialization
 1. This is where we define defaults and initial values for this.props and this.state
