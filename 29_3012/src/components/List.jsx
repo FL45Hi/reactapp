@@ -18,7 +18,7 @@ const List = (props) => {
   return (
   <div>
         <h4>List of Number with Squares.</h4>
-        <ul>{listItems}</ul>;
+        <ul>{listItems}</ul>
 
   </div>
   )

@@ -15,7 +15,7 @@ const Map = (props) => {
             <ListVal key={name.toString()} value={name} />
         ) }
       </ul>
-      ;
+      
     </div>
   );
 };

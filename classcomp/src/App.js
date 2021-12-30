@@ -7,7 +7,8 @@ import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import CompositionComp from "./components/CompositionComp";
 import ClockClassComp from "./components/ClockClassComp";
 import MountComp from "./components/MountComp";
-import Lifecycle from "./components/LifeCycle";
+import UpdateComp from "./components/UpdateComp";
+import ExampleLifeCycle from "./components/ExampleLifeCycle";
 
 
 // Root level usage
@@ -77,7 +78,9 @@ class Root extends React.Component {
     <Routes>
       <Route exact path="/" element={<App/>} />
       <Route exact path='/mount' element={<MountComp />} />
-      <Route exact path='/update' element={<Lifecycle />} />
+      <Route exact path='/update' element={<UpdateComp />} />
+      <Route exact path='/ex' element={<ExampleLifeCycle />} />
+
     {/* </Switch> */}
     </Routes>
   </Router>)

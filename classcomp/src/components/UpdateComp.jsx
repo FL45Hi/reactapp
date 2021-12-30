@@ -41,7 +41,7 @@ class EvenNums extends React.Component {
     }
 }
 
-class Lifecycle extends React.Component {
+class UpdateComp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -64,4 +64,4 @@ class Lifecycle extends React.Component {
   }
 }
 
-export default Lifecycle;
+export default UpdateComp;
