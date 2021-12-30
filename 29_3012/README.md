@@ -1,13 +1,13 @@
-# Getting Started with Create React App
+### Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+#### React Ref
 
-In the project directory, you can run:
+1. Refs is similar to keys in React or literlly references in React. 
+2. useRef returns *mutable ref object*
+3. Object's .current property is initialized to passed argument - default intial value.
+4. Returned object will persist for lifetime of component.
 
-### `npm start`
+const refObject = useRef(initialValues);
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
+NOTE: use can use **createRef** if you are using class component.
