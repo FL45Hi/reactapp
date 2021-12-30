@@ -11,3 +11,20 @@
 const refObject = useRef(initialValues);
 
 NOTE: use can use **createRef** if you are using class component.
+
+
+#### React BootStrap
+
+Add a link for loading the CSS stylesheet for Bootstrap inside of the head tag in the public/index.html file of the application:
+
+<link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+    
+    
+ #### Styled components
+ 
+ The styled components library offers an approach for defining styles through tagged template literals of ES6.
+ 
