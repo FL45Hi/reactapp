@@ -7,7 +7,9 @@ import REF from "./components/Ref";
 import { useState } from "react";
 import FragmentsComp from "./components/FragmentsComp";
 
-import { StyledComponentComp } from './components/StyledComponentComp';
+import { StyledComponentComp } from "./components/StyledComponentComp";
+import NameList from "./components/NameList";
+import FRParentInput from "./components/FRParentInput";
 
 const Styles = {
   color: "purple",
@@ -36,7 +38,7 @@ function App() {
       <Map names={names} />
 
       {/* Inline CSS  */}
-      <div style={{width: "40%"}}>
+      <div style={{ width: "40%" }}>
         <div style={{ color: "yellow", fontSize: "1rem" }}>Yellow Div</div>
 
         <div style={Styles}>Style Me!</div>
@@ -45,17 +47,21 @@ function App() {
         {flag && <BootStrapComp />}
       </div>
 
-      <div style={{paddingBottom: "20px"}}>
+      <div style={{ paddingBottom: "20px" }}>
         <h2>Referenced Object.</h2>
         <REF />
+
+        <h3> Forwarding Reference example...</h3>
+        <FRParentInput />
       </div>
 
-      <div style={{paddingBottom: "20px"}}>
+      <div style={{ paddingBottom: "20px" }}>
         <FragmentsComp />
       </div>
 
       <StyledComponentComp />
 
+      <NameList />
     </div>
   );
 }

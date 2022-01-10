@@ -39,11 +39,12 @@ const MyHOC = (WrappedComponent) => {
 }
 
 // usage: button component 
-export const HOC = (props) => {
+export const HighOC = (props) => {
     return (
         <button style={props.styles}>I am MyButton Comp.</button>
     )
 }
+
 
 // Usage of HOC component
 

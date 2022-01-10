@@ -10,17 +10,18 @@ const List = (props) => {
 
   console.log(nums);
   // Key Should be Specified inside Array.
+  // Each Child in array or iterator should have unique 'key' prop.
 
   const listItems = nums.map((num) => {
     return <ListItem key={num.toString()} value={num} />;
   });
 
   return (
-  <div>
-        <h4>List of Number with Squares.</h4>
-        <ul>{listItems}</ul>
+    <div>
+      <h4>List of Number with Squares.</h4>
+      <ul>{listItems}</ul>
 
-  </div>
+    </div>
   )
 };
 

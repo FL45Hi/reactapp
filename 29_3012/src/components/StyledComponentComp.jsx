@@ -1,4 +1,4 @@
-import React , {useState, useRef} from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 
 const Div = styled.div`
@@ -71,31 +71,31 @@ const InputWrapper = styled.input`
 
 
 export const StyledComponentComp = (props) => {
-    
-    return (
-        <>
-        <Div>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, neque.</p>
+  return (
+    <>
+      <Div>
 
-            <button>Click Me!</button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, neque.</p>
 
-            
-            
-            <DividerWrapper>    
-            <hr />      
-            <span>or</span>
-            </DividerWrapper>
+        <button>Click Me!</button>
 
-            <InputWrapper type="text" placeholder="Input in Styled Component" />
 
-            <ButtonWrapper>Styled Button</ButtonWrapper>
 
-        </Div>
+        <DividerWrapper>
+          <hr />
+          <span>or</span>
+        </DividerWrapper>
 
-        
+        <InputWrapper type="text" placeholder="Input in Styled Component" />
 
-            
-        </>
-    )
+        <ButtonWrapper>Styled Button</ButtonWrapper>
+
+      </Div>
+
+
+
+
+    </>
+  )
 }

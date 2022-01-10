@@ -11,6 +11,7 @@ import ReduceFilter from './components/ReduceFilter';
 import Arrow from './components/Arrow';
 
 import ListItems from './components/ListItems';
+import Hello from './components/jsxsynax';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
       <Arrow />
 
       <ListItems />
+
+      <Hello />
 
     </div>
   );

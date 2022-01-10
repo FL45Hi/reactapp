@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+// Note: rmb EventHandler is function not a function call(donot add parathesis)
 
 const EventHandler = () => {
     const [ count, setCount ] = useState(0)
@@ -12,6 +13,8 @@ const EventHandler = () => {
       <div>
         <div>{count}</div>
         {/* <button onClick={() => console.log('clicked')}> */}
+        {/* <button onClick={handleClick} ></button>*/}
+        {/* <button onClick={() => handleClick()} */}
 
         <button onClick={() => setCount(count + 1)}>
         plus
