@@ -1,0 +1,29 @@
+{
+  "contacts": [
+    {
+      "id": "933bcab0-dd54-4ef6-98b4-920c8cb4bd26",
+      "name": "KRISHNA SHINDE",
+      "email": "krishnashinde975@gmail.com"
+    },
+    {
+      "id": "beddfc59-be66-4246-b5cd-84bce3a8ea27",
+      "name": "soul emperor",
+      "email": "soulemperor81@gmail.com"
+    },
+    {
+      "id": "8c18515d-826a-47b4-b9fb-dddee224e200",
+      "name": "KRISHNA SHINDE",
+      "email": "krishnashinde975@gmail.com"
+    },
+    {
+      "id": "4f0ec7b7-507d-48d8-a3b5-cf5494edde02",
+      "name": "king",
+      "email": "kdshinde975@gmail.com"
+    },
+    {
+      "id": "1177a78b-e3b5-4906-8bd6-45f725f5818a",
+      "name": "Erza",
+      "email": "Esdeath@outlook.com"
+    }
+  ]
+}
